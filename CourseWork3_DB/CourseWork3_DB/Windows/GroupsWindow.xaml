@@ -1,0 +1,83 @@
+﻿<Window x:Class="CourseWork3_DB.Windows.GroupsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork3_DB.Windows"
+        mc:Ignorable="d"
+        Title="GroupsWindow" Height="650" Width="350" MinHeight="650" MinWidth="350" Initialized="FillTableWhenInizialized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <DataGrid
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            ItemsSource="{Binding Source=Models}"
+            CanUserResizeRows="False"
+            FontSize="16"
+            x:Name="GroupDataGrid"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            VerticalContentAlignment="Center"
+            Margin="10,0,10,10"
+            Background="White"
+            HeadersVisibility="Column"
+            CanUserAddRows="False"
+            HorizontalGridLinesBrush="LightGray"
+            VerticalGridLinesBrush="LightGray"
+            Width="auto"
+            IsReadOnly="True">
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}"
+                       TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="Height" Value="25" />
+                    <Setter Property="BorderBrush" Value="Black" />
+                    <Setter Property="BorderThickness" Value="0.5" />
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+
+        <Button Grid.Row="0"
+                x:Name="AddNewButton"
+                Height="41"
+                Content="Add new"
+                Margin="10,4,15,4"
+                Background="#FF3D59D4"
+                BorderBrush="{x:Null}"
+                Foreground="White"
+                FontSize="24"
+                FontWeight="Normal"
+                Click="AddNewButtonClick" />
+
+        <Button
+                Grid.Column="1"
+                x:Name="DeleteElementButton"
+                Height="41"
+                Content="Delete"
+                Margin="15,4,10,4"
+                Background="#FF3D59D4"
+                BorderBrush="{x:Null}"
+                Foreground="White"
+                FontSize="24"
+                FontWeight="Normal"
+                Click="DeleteGroupButtonClick" />
+
+        <TextBox Grid.Row="1"
+                 Grid.ColumnSpan="2"
+                 x:Name="GroupNameTextBox"
+                 VerticalContentAlignment="Center"
+                 Height="40"
+                 FontSize="22" 
+                 Margin="10,0,10,0"
+                 TextChanged="SearchGroupByName"/>
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="CourseWork3_DB.Windows.CreateNewGroupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork3_DB.Windows"
+        mc:Ignorable="d"
+        Title="CreateNewGroupWindows"  Height="350" Width="400" MinHeight="350" MinWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               FontSize="42"
+               Content="Creating new group"
+               Height="80"
+               HorizontalContentAlignment="Center"
+               VerticalAlignment="Center" />
+        <Label Grid.Row="1"
+               FontSize="18"
+               Content="Name"
+               Width="350"
+               Foreground="#FF646464"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="2"
+                 x:Name="NameTextBox"
+                 Width="350"
+                 VerticalContentAlignment="Center"
+                 VerticalAlignment="Top"
+                 Height="41"
+                 FontSize="22"/>
+        <Button Grid.Row="3"
+                x:Name="CreateNewGroupButton"
+                Height="41"
+                Width="150"
+                Content="Create"
+                Background="#FF3D59D4"
+                BorderBrush="{x:Null}"
+                Foreground="White"
+                FontSize="24"
+                FontWeight="Normal"
+                Click="CreateNewGroupButtonClick" />
+    </Grid>
+</Window>

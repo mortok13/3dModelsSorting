@@ -1,0 +1,74 @@
+﻿<Window x:Class="CourseWork3_DB.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork3_DB"
+        mc:Ignorable="d"
+        Title="Registration" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="40" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               FontSize="42"
+               Content="Registration"
+               Height="70"
+               HorizontalContentAlignment="Center"
+               VerticalAlignment="Center" />
+        <Label Grid.Row="1"
+               FontSize="18"
+               Content="Login"
+               Width="350"
+               Foreground="#FF646464"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Center" />
+        <Label Grid.Row="1"
+               x:Name="WarningLabel"
+               FontSize="16"
+               Visibility="Hidden"
+               Content="Login is already taken"
+               Width="350"
+               HorizontalContentAlignment="Right"
+               Foreground="#FFE00404"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Center" />
+        <TextBox Grid.Row="2"
+                 x:Name="LoginTextBox"
+                 Width="350"
+                 VerticalContentAlignment="Center"
+                 Height="41"
+                 FontSize="22"
+                 TextChanged="LoginChecked" />
+        <Label Grid.Row="3"
+               FontSize="18"
+               Content="Password"
+               Width="350"
+               Foreground="#FF646464"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Center" />
+        <PasswordBox Grid.Row="4"
+                     x:Name="PasswordTextBox"
+                     Width="350"
+                     VerticalContentAlignment="Center"
+                     Height="41"
+                     FontSize="22" />
+        <Button Grid.Row="5"
+                x:Name="RegistrationTextBox"
+                Height="41"
+                Width="150"
+                Content="Register"
+                Background="#FF3D59D4"
+                BorderBrush="{x:Null}"
+                Foreground="White"
+                FontSize="24"
+                FontWeight="Normal"
+                Click="RegistrationButtonClick" />
+    </Grid>
+</Window>

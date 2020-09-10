@@ -1,0 +1,148 @@
+﻿<Window x:Class="CourseWork3_DB.AddNewModelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork3_DB"
+        mc:Ignorable="d"
+        Title="AddNewModel"  Height="750" Width="400" MinWidth="400" MinHeight="750" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               FontSize="42"
+               Content="Add new Model"
+               Height="60"
+               HorizontalContentAlignment="Center"
+               VerticalAlignment="Center" />
+        <Label Grid.Row="1"
+               FontSize="18"
+               Content="Name*"
+               Width="350"
+               Foreground="#FF646464"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="1"
+                 x:Name="ModelNameTextBox"
+                 Width="350"
+                 VerticalAlignment="Bottom"
+                 Margin="10"
+                 VerticalContentAlignment="Center"
+                 Height="41"
+                 FontSize="22"/>
+        <Label Grid.Row="2"
+               FontSize="18"
+               Content="Type*"
+               Width="350"
+               Foreground="#FF646464"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="2"
+                  x:Name="TypeOfModelComboBox" 
+                  Height="41"
+                  Width="350"
+                  VerticalAlignment="Bottom"
+                  Margin="10" FontSize="18">
+            <!--<TextBlock>Organic</TextBlock>
+            <TextBlock>Architecture</TextBlock>
+            <TextBlock>Environment</TextBlock>
+            <TextBlock>Character</TextBlock>-->
+        </ComboBox>
+        <Label Grid.Row="3"
+               FontSize="18"
+               Content="Category*"
+               Width="350"
+               Foreground="#FF646464"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="3"
+              x:Name="CategoryOfModelComboBox" 
+              Height="41"
+              Width="350"
+              VerticalAlignment="Bottom"
+              Margin="10" FontSize="18">
+            <TextBlock>LowPoly</TextBlock>
+            <TextBlock>HighPoly</TextBlock>
+            <TextBlock>MidlePoly</TextBlock>
+        </ComboBox>
+        <Label Grid.Row="4"
+               FontSize="18"
+               Content="Status*"
+               Width="350"
+               Foreground="#FF646464"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="4"
+              x:Name="StatusOfModelComboBox" 
+              Height="41"
+              Width="350"
+              VerticalAlignment="Bottom"
+              Margin="10" FontSize="18">
+            <TextBlock>In progress</TextBlock>
+            <TextBlock>Done</TextBlock>
+        </ComboBox>
+        <Label Grid.Row="5"
+               FontSize="18"
+               Content="Group"
+               Width="350"
+               Foreground="#FF646464"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="5"
+              x:Name="GroupOfModelComboBox" 
+              Height="41"
+              Width="350"
+              VerticalAlignment="Bottom"
+              Margin="10"
+              FontSize="18"
+              Initialized="PopulateGroups"/>
+        <Label Grid.Row="6"
+               FontSize="18"
+               Content="Path*"
+               Width="350"
+               Foreground="#FF646464"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="6"
+                 x:Name="ModelPathTextBox"
+                 Width="290"
+                 VerticalAlignment="Bottom"
+                 Margin="-60,0,0,10"
+                 VerticalContentAlignment="Center"
+                 Height="41"
+                 FontSize="22"/>
+        <Button Grid.Row="6"
+                x:Name="ChooseFileButton"
+                Content="File"
+                Height="41"
+                Width="50"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Background="White"
+                BorderBrush="Black"
+                Foreground="Black"
+                FontSize="24"
+                Click="ChooseFileButtonClick"
+                Margin="300,0,0,10"
+                 />
+        <Button Grid.Row="7"
+                x:Name="AddButton"
+                Height="41"
+                Width="150"
+                Content="Add"
+                Background="#FF3D59D4"
+                BorderBrush="{x:Null}"
+                Foreground="White"
+                FontSize="24"
+                FontWeight="Normal"
+                Click="AddButtonClick" />
+    </Grid>
+</Window>
